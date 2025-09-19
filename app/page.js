@@ -37,7 +37,7 @@ export default function Home() {
   const [activeProject, setActiveProject] = useState(0);
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [formSubmitted, setFormSubmitted] = useState(false);
-   
+
 
   const skills = [
     "JavaScript", "React", "Node.js", "MongoDB",
@@ -334,7 +334,7 @@ export default function Home() {
               transition={{ delay: 0.3, duration: 0.8 }}
             >
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-300">
-              ADITYA BALI
+                ADITYA BALI
               </span>
             </motion.h1>
 
@@ -511,7 +511,7 @@ export default function Home() {
             </h2>
 
             <p className="text-center text-gray-300 mb-8 max-w-2xl mx-auto">
-              These are some of my practice projects where I've honed my skills in various technologies and design patterns.
+              {"These are some of my practice projects where I've honed my skills in various technologies and design patterns."}
             </p>
 
             <div className="relative h-96 w-full overflow-hidden rounded-xl border border-white/10 bg-gray-900/30 backdrop-blur-sm p-4">
@@ -547,7 +547,7 @@ export default function Home() {
             </div>
           </motion.div>
 
-       
+
           <motion.div
             className="mt-24 w-full max-w-2xl"
             initial={{ opacity: 0 }}
@@ -569,7 +569,8 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
-                  <p className="text-gray-300">Thank you for reaching out. I'll get back to you soon.</p>
+                  <p className="text-gray-300">{"Thank you for reaching out. I'll get back to you soon."}</p>
+
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -639,7 +640,7 @@ export default function Home() {
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
-                   baliaditya72@gmail.com
+                    baliaditya72@gmail.com
                   </a>
                 </div>
               </div>
