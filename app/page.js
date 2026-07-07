@@ -42,27 +42,40 @@ export default function Home() {
   const skills = [
     "JavaScript", "React", "Node.js", "MongoDB",
     "AI Integration", "REST API", "Next.js", "Tailwind CSS",
-    "TypeScript", "GraphQL", "AWS", "Python"
+    "TypeScript",
   ];
 
   const projects = [
     {
       id: 1,
-      title: "Portfolio Analyzer AI",
-      description: "A sophisticated AI tool that uses Grok LLM to comprehensively scan GitHub repositories, developer profiles, and resumes to provide in-depth analysis of portfolio websites. The system generates detailed reports with actionable insights for improvement.",
-      longDescription: "This project leverages cutting-edge natural language processing to evaluate technical portfolios. It analyzes code quality, project complexity, design patterns, and overall presentation. The AI provides personalized recommendations for enhancing visibility and impact.",
-      tags: ["AI", "LLM", "GitHub API", "NLP", "Next.js", "Tailwind"],
-      link: "#",
-      image: "/project1.jpg"
+      title: "Ai Fitness Web App",
+      description: "Built a fitness app using React, Node.js, and MongoDB with JWT authentication. Integrated Gemini API for AI food recognition and calorie detection. Managed real-time data using React Context API. Designed personalized onboarding and calorie tracking system. Developed analytics dashboard with BMI and progress tracking. Implemented secure REST APIs with JWT protection. Created a responsive dark-mode UI using",
+      longDescription: " This project is an AI-powered fitness tracking platform that combines full-stack development with intelligent food recognition. It helps users track calories, monitor fitness goals, analyze health progress, and receive personalized insights through real-time analytics and AI-based meal detection ",
+      tags: ["AI", "LLM", "Gemni Api", "Grok Api", "React.js", "Tailwind, Express.js", "Mongodb.js"],
+      link: "https://ai-fittrack-app.onrender.com/",
+      image: "/Screenshot 2026-07-05 132951.png"
     },
     {
       id: 2,
-      title: "Petrion Clone",
-      description: "A comprehensive payment platform designed for funding personal projects and creative endeavors. Features seamless RazorPay integration for secure transactions and a user-friendly dashboard for project management.",
-      longDescription: "This fintech solution enables creators to showcase their projects and receive funding from supporters. It includes features like milestone-based funding, progress tracking, and transparent financial reporting. The platform ensures secure transactions with industry-standard encryption.",
-      tags: ["Payment Gateway", "Fintech", "React", "Node.js", "MongoDB", "RazorPay"],
-      link: "#",
-      image: "/project2.jpg"
+      title: "ContextOS - AI Knowledge Workspace",
+      description: "Built an AI-powered enterprise knowledge management platform using React, Node.js, Express.js, and MongoDB. Implemented secure JWT authentication with role-based access control (Owner, Admin, Member). Developed intelligent document ingestion for PDF, DOCX, and text files using Multer and LangChain. Integrated Gemini API with RAG and vector search for AI-powered semantic document search, contextual chat, and source citations. Designed a premium responsive dashboard with analytics, activity logs, and workspace management.",
+      longDescription: "ContextOS is an AI-powered enterprise workspace that centralizes company knowledge into a searchable intelligence platform. The system processes documents, generates vector embeddings, performs semantic search using Retrieval-Augmented Generation (RAG), and delivers context-aware answers with citations. It includes secure authentication, workspace management, role-based permissions, document analytics, activity tracking, and an intuitive modern dashboard for enterprise teams.",
+      tags: [
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "JWT",
+        "LangChain",
+        "Google Gemini API",
+        "Pinecone",
+        "RAG",
+        "Vector Search",
+        "Tailwind CSS",
+        "AI"
+      ],
+      link: "https://contextos-6554.onrender.com",
+      image: "/Screenshot 2026-07-07 205509.png"
     },
     {
       id: 3,
@@ -70,8 +83,8 @@ export default function Home() {
       description: "A fully functional music player built with vanilla JavaScript that replicates core Spotify features. Includes playlist creation, audio visualization, and a responsive interface that works across devices.",
       longDescription: "This music streaming application features a sleek, dark-themed interface with smooth animations. It includes advanced functionality like audio visualization, playlist management, search, and recommendations. The player supports various audio formats and offers customizable equalizer settings.",
       tags: ["JavaScript", "Web Audio API", "UI/UX", "HTML5", "CSS3"],
-      link: "#",
-      image: "/project3.jpg"
+      link: "https://transcendent-yeot-f64571.netlify.app/",
+      image: "/Screenshot 2026-07-07 205545.png"
     }
   ];
 
@@ -457,18 +470,16 @@ export default function Home() {
                     {projects[activeProject].title}
                   </h3>
 
-                  <div className="h-48 bg-gradient-to-br from-purple-900/30 to-blue-900/30 rounded-lg mb-6 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 极速20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                        </svg>
-                      </div>
-                      <p className="text-gray-300">Project Visualization</p>
-                    </div>
+                  <div className="h-48 rounded-lg mb-6 overflow-hidden relative bg-gray-900/40">
+                    <Image
+                      src={projects[activeProject].image}
+                      alt={projects[activeProject].title}
+                      fill
+                      className="object-cover"
+                    />
                   </div>
 
-                  <p className="text-gray-300 mb-极速 leading-relaxed">
+                  <p className="text-gray-300 mb-6 leading-relaxed">
                     {projects[activeProject].longDescription}
                   </p>
 
@@ -486,11 +497,13 @@ export default function Home() {
                   >
                     <a
                       href={projects[activeProject].link}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-purple-500/30"
                     >
                       View Project
-                      <svg xmlns="极速://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 极速00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clipRule="evenodd" />
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clipRule="evenodd" />
                       </svg>
                     </a>
                   </motion.div>
